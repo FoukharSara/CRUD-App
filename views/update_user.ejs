@@ -1,0 +1,40 @@
+<%- include('include/_header') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto mt-4">
+                <div class="card shadow">
+                    <div class="card-header text-light bg-secondary text-center">
+                        <h3>Update Infos</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/api/users" method="POST" id="update_user">
+                            <div class="mb-3">
+                                <label for="name" class="form-label" >Name</label>
+                                <input type="text" name="name" value="<%= user.name %>" class="form-control form-control-lg" placeholder="Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" name="email" value="<%= user.email %>" class="form-control form-control-lg" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" name="phone" value="<%= user.phone %>" class="form-control form-control-lg" placeholder="06********" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="contract" class="form-label">Contract</label>
+                                <input type="text" name="contract" value="<%= user.contract %>" class="form-control form-control-lg" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="submit" name="submit" class="btn btn-primary btn-lg" value="Submit">
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<%- include('include/_footer') %>
